@@ -27,7 +27,9 @@ Crea una funcion llamada: challenge1  que realice lo siguiente:
 */
 
 // CREA TU FUNCION challenge1 aqui:
+function challenge1(){
 
+}
 
 
 /*
@@ -36,7 +38,12 @@ Crea una funcion llamada: challenge2 que utilizando un FOR convierta todos los n
 
 // CREA TU FUNCION challenge2 2 aquí.
 
-
+function challenge2(){
+    for(let i=0; i < nombres.length; i++){
+        nombres[i] = nombres[i].toUpperCase();
+    }
+    console.log(nombres)
+}
 
 /*
 
@@ -45,13 +52,25 @@ A) Define un objeto tipo "Dog" que reciba 3 parametros
 1) Nombre
 2) Color
 3) Raza
-
-
+*/
+function Dog(name, color, raza){
+    this.name = name;
+    this.color = color;
+    this.raza = raza;
+    this.printInfo = printInfo;
+}
+/*
 B) Crea 3 objectos siguiendo esa clase con diferentes valores
 
 eJ   var fido = new Dog("Fido","Cafe","Poodle")
 
+*/
+var fido = new Dog("Fido","Cafe","Poodle")
+var nina = new Dog("Nina","Gris","Shitzu")
+var snoop = new Dog("Snoop","Black","OG")
 
+
+/*
 *****BONUS**** 10  puntos
 
 Crea una método llamado printInfo()  que escriba en consola todas las propiedades del objeto que lo invoca. 
@@ -69,9 +88,11 @@ Deberia escribir en consola
 
 // CREA TU FUNCION printInfo() AQUI
 
+function printInfo(){
+    var result = `Nombre: ${this.name} , De color: ${this.color}, Raza: ${this.raza}`;
+}
 
-
-
+fido.printInfo();
 </script>
 
 </head>
